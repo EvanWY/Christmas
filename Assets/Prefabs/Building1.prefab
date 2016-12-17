@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013430575024}
   - 212: {fileID: 212000013142401292}
+  - 60: {fileID: 60000010554245936}
   m_Layer: 0
   m_Name: Building
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +133,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013753580192}
   m_RootOrder: 2
+--- !u!60 &60000010554245936
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010812254056}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 1.17, y: -0.58}
+      - {x: 1.17, y: -0.53}
+      - {x: 1.0799999, y: -0.25}
+      - {x: 1.06, y: -0.19}
+      - {x: 1.03, y: -0.12}
+      - {x: 1.0799999, y: -0.089999996}
+      - {x: 1.0699999, y: 0.06}
+      - {x: 0.95, y: 0.29}
+      - {x: 0.88, y: 0.35999998}
+      - {x: 0.82, y: 0.37}
+      - {x: 0.93, y: 0.95}
+      - {x: 0.95, y: 0.96999997}
+      - {x: 0.98999995, y: 1.2099999}
+      - {x: 0.91999996, y: 1.27}
+      - {x: -0.07, y: 1.27}
+      - {x: -0.13, y: 1.1899999}
+      - {x: -0.12, y: 1.14}
+      - {x: -0.11, y: 0.96}
+      - {x: 0, y: 0.94}
+      - {x: 0.06, y: 0.57}
+      - {x: -0.02, y: 0.39}
+      - {x: -0.03, y: 0.39999998}
+      - {x: -0.32, y: 0.42999998}
+      - {x: -0.79999995, y: 0.48}
+      - {x: -0.88, y: 0.42999998}
+      - {x: -0.93, y: 0.39}
+      - {x: -1.02, y: 0.22}
+      - {x: -1.06, y: 0.07}
+      - {x: -1.05, y: 0}
+      - {x: -1.12, y: -0.26}
+      - {x: -1.2099999, y: -0.52}
+      - {x: -1.2099999, y: -0.74}
+      - {x: -1.18, y: -1.05}
+      - {x: -1.16, y: -1.29}
+      - {x: -1.14, y: -1.3}
+      - {x: 1.06, y: -1.3}
+      - {x: 1.0799999, y: -1.28}
+      - {x: 1.09, y: -1.2099999}
+      - {x: 1.12, y: -1.06}
 --- !u!61 &61000010116858464
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -143,9 +197,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.09983403}
   serializedVersion: 2
-  m_Size: {x: 2.75, y: 1.99}
+  m_Size: {x: 2.75, y: 1.7903318}
 --- !u!61 &61000011348593764
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -157,9 +211,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.65051895, y: 0.04819137}
+  m_Offset: {x: 0.5637756, y: 0.04819125}
   serializedVersion: 2
-  m_Size: {x: 3.4989643, y: 0.80518776}
+  m_Size: {x: 3.325478, y: 0.80518776}
 --- !u!114 &114000010976945654
 MonoBehaviour:
   m_ObjectHideFlags: 1

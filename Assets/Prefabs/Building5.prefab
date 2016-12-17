@@ -70,9 +70,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011498627366}
   - 212: {fileID: 212000012556924264}
+  - 60: {fileID: 60000013173568018}
   m_Layer: 0
   m_Name: Building
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +133,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010573066756}
   m_RootOrder: 1
+--- !u!60 &60000013173568018
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013783931574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 1.095, y: 0.275}
+      - {x: 0.995, y: 0.445}
+      - {x: 0.965, y: 0.585}
+      - {x: 0.905, y: 0.755}
+      - {x: 0.92499995, y: 1.095}
+      - {x: 1.055, y: 1.355}
+      - {x: 1.035, y: 1.545}
+      - {x: 1.015, y: 1.555}
+      - {x: 0.044999998, y: 1.555}
+      - {x: 0.015, y: 1.355}
+      - {x: 0.085, y: 1.225}
+      - {x: 0.205, y: 0.875}
+      - {x: 0.145, y: 0.79499996}
+      - {x: -0.775, y: 0.84499997}
+      - {x: -0.875, y: 0.805}
+      - {x: -0.945, y: 0.72499996}
+      - {x: -1.005, y: 0.53499997}
+      - {x: -1.095, y: 0.305}
+      - {x: -1.095, y: -0.405}
+      - {x: -1.035, y: -1.545}
+      - {x: -1.025, y: -1.555}
+      - {x: 1.025, y: -1.555}
+      - {x: 1.055, y: -1.0749999}
+      - {x: 1.095, y: -0.175}
 --- !u!61 &61000012692598046
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -143,9 +182,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000042755357, y: 0.079523206}
   serializedVersion: 2
-  m_Size: {x: 2.75, y: 1.99}
+  m_Size: {x: 2.75, y: 1.8309537}
 --- !u!61 &61000013588107460
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -157,9 +196,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.65051895, y: 0.04819137}
+  m_Offset: {x: 0.6384975, y: 0.048190683}
   serializedVersion: 2
-  m_Size: {x: 3.4989643, y: 0.80518776}
+  m_Size: {x: 3.4749222, y: 0.80518776}
 --- !u!114 &114000013057592730
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -70,9 +70,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011498627366}
   - 212: {fileID: 212000012556924264}
+  - 60: {fileID: 60000013179295468}
   m_Layer: 0
   m_Name: Building
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +133,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010573066756}
   m_RootOrder: 1
+--- !u!60 &60000013179295468
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013783931574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.82, y: 0.07}
+      - {x: 0.72999996, y: 0.14}
+      - {x: 0.78999996, y: 0.71999997}
+      - {x: 0.82, y: 1.0799999}
+      - {x: 0.89, y: 1.09}
+      - {x: 0.93, y: 1.2099999}
+      - {x: 0.93, y: 1.41}
+      - {x: 0.88, y: 1.4399999}
+      - {x: 0.04, y: 1.4399999}
+      - {x: -0.01, y: 1.4}
+      - {x: -0.02, y: 1.37}
+      - {x: -0.03, y: 1.27}
+      - {x: 0.01, y: 1.11}
+      - {x: 0.08, y: 1.09}
+      - {x: 0.11, y: 0.58}
+      - {x: -0.04, y: 0.68}
+      - {x: -0.48, y: 0.96999997}
+      - {x: -0.51, y: 0.97999996}
+      - {x: -0.93, y: 0.13}
+      - {x: -0.93, y: -0.26999998}
+      - {x: -0.88, y: -1.28}
+      - {x: -0.87, y: -1.43}
+      - {x: -0.85999995, y: -1.4399999}
+      - {x: 0.74, y: -1.4399999}
+      - {x: 0.75, y: -1.43}
+      - {x: 0.76, y: -1.38}
+      - {x: 0.78, y: -0.9}
 --- !u!61 &61000012692598046
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -143,9 +185,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000041712542, y: 0.0978743}
   serializedVersion: 2
-  m_Size: {x: 2.75, y: 1.99}
+  m_Size: {x: 2.75, y: 1.7942513}
 --- !u!61 &61000013588107460
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -157,9 +199,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.65051895, y: 0.04819137}
+  m_Offset: {x: 0.6144563, y: 0.04819098}
   serializedVersion: 2
-  m_Size: {x: 3.4989643, y: 0.80518776}
+  m_Size: {x: 3.4268382, y: 0.80518776}
 --- !u!114 &114000013057592730
 MonoBehaviour:
   m_ObjectHideFlags: 1
