@@ -25,7 +25,7 @@ public class LevelGenerator : MonoBehaviour {
 
 		BuildingType newBuildingType;
 
-		float rnd = Random.Range(0, 1);
+		float rnd = Random.Range(0f, 1f);
 		if (rnd < BuildingTypeRandomRange[0]) {
 			newBuildingType = BuildingType.None;
 		}

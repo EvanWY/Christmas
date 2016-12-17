@@ -36,9 +36,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013878318004}
   - 212: {fileID: 212000010399092534}
+  - 61: {fileID: 61000010116858464}
   m_Layer: 0
   m_Name: Gift
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +53,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013068646594}
   - 212: {fileID: 212000010932865128}
-  - 65: {fileID: 65000010702650126}
+  - 61: {fileID: 61000011348593764}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Obstacle
@@ -125,10 +126,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011012063082}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.17, y: 3.17, z: 0}
+  m_LocalScale: {x: 0.7144691, y: 0.912316, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013753580192}
   m_RootOrder: 2
@@ -152,18 +153,34 @@ PolygonCollider2D:
       - {x: 0.89252114, y: 0.047145605}
       - {x: -0.8634989, y: 0.01812315}
       - {x: -1.056916, y: 1.3620412}
---- !u!65 &65000010702650126
-BoxCollider:
+--- !u!61 &61000010116858464
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011012063082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.75, y: 1.99}
+--- !u!61 &61000011348593764
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012522619048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.65051895, y: 0.04819137}
   serializedVersion: 2
-  m_Size: {x: 3.5477939, y: 1.1157849, z: 0.2}
-  m_Center: {x: 0.62610584, y: 0.07069546, z: 0}
+  m_Size: {x: 3.4989643, y: 0.80518776}
 --- !u!114 &114000010976945654
 MonoBehaviour:
   m_ObjectHideFlags: 1

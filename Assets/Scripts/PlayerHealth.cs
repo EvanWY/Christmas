@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
         }
 
         StartCoroutine(RegenerateHealth());
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
