@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour {
     private SpriteRenderer sRenderer;
     private float currentHealth;
     private float invincibleT;
+    private bool isInvinciblePM;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,8 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        isInvinciblePM = pm.isInvincible;
         if(currentHealth <= 0f)
         {
             GameOver();
@@ -33,7 +36,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (!isInvinciblePM && collision.CompareTag("Obstacle"))
         {
             isDamaged = true;
             currentHealth -= damage;

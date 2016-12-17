@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public float MaxHeight;
     public float MinHeight;
+    public bool isInvincible;
 
     private BoxCollider2D bCollider;
     private SpriteRenderer sRenderer;
@@ -58,10 +59,16 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (!isInvincible && collision.CompareTag("Obstacle"))
         {
             StartCoroutine(Invincible(InvincibleTime));
             Debug.Log("Collide with house");
+        }
+
+        if (collision.CompareTag("Gift"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Gift delivered");
         }
     }
 
@@ -69,8 +76,8 @@ public class PlayerMovement : MonoBehaviour {
 
     IEnumerator Invincible(float duration)
     {
-        bCollider.enabled = false;
-
+        //bCollider.enabled = false;
+        isInvincible = true;
         var startTime = Time.time;
         while (Time.time - startTime < InvincibleTime)
         {
@@ -79,7 +86,6 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         sRenderer.enabled = true;
-
-        bCollider.enabled = true;
+        isInvincible = false;
     }
 }
