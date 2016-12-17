@@ -16,11 +16,28 @@ public class LevelGenerator : MonoBehaviour {
 
 	public Transform buildingBase;
 
+	public float[] BuildingTypeRandomRange;
+
 	void generateBuilding() {
 		GameObject newBuilding = Instantiate(BuildingPrefabs.RandElement());
 		GameObject lastBuilding = buildings.Count > 0 ? buildings[buildings.Count - 1] : null;
 
-		newBuilding.GetComponent<BuildingController>().Init(BuildingType.None, 0);
+
+		BuildingType newBuildingType;
+
+		float rnd = Random.Range(0, 1);
+		if (rnd < BuildingTypeRandomRange[0]) {
+			newBuildingType = BuildingType.None;
+		}
+		else if (rnd < BuildingTypeRandomRange[1]) {
+			newBuildingType = BuildingType.Smoke;
+		}
+		else {
+			newBuildingType = BuildingType.Gift;
+		}
+
+		newBuilding.GetComponent<BuildingController>().Init(newBuildingType, 0);
+
 		newBuilding.transform.SetParent(buildingBase);
 
 		if (lastBuilding != null) {
