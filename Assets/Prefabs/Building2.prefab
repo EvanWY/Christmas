@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011602970168}
   - 60: {fileID: 60000012579127978}
+  - 114: {fileID: 114000010045875412}
   m_Layer: 0
   m_Name: Building2
   m_TagString: Obstacle
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012827678634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.64, y: -4, z: 0}
+  m_LocalPosition: {x: 7.64, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -90,6 +91,19 @@ PolygonCollider2D:
       - {x: 1.4936838, y: 0.0074100494}
       - {x: -1.5048671, y: -0.0037736893}
       - {x: -1.7674842, y: 1.9530551}
+--- !u!114 &114000010045875412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012827678634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 884ebf8bb4775534fa4f7cb534499103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 4
+  Height: 4
 --- !u!212 &212000012333246920
 SpriteRenderer:
   m_ObjectHideFlags: 1

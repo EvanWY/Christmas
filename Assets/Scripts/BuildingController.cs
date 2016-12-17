@@ -3,20 +3,16 @@ using System.Collections;
 
 public class BuildingController : MonoBehaviour {
 
-    public enum BuildingType
-    {
-        None,
-        Smoke,
-        Gift,
-    }
+	public float Width;
+	public float Height;
 
-	// Use this for initialization
-	void Start () {
-	
+	public void Init(BuildingType type, int orderInLayer) {
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+}
+
+public enum BuildingType {
+	None,
+	Smoke,
+	Gift,
 }
