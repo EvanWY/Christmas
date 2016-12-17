@@ -70,9 +70,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011498627366}
   - 212: {fileID: 212000012556924264}
+  - 60: {fileID: 60000013836165444}
   m_Layer: 0
   m_Name: Building
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +133,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010573066756}
   m_RootOrder: 1
+--- !u!60 &60000013836165444
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013783931574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 1.41, y: -0.52}
+      - {x: 1.41, y: -0.48}
+      - {x: 1.3, y: -0.38}
+      - {x: 1.1999999, y: -0.32}
+      - {x: 1.1999999, y: 0.84}
+      - {x: 1.26, y: 0.84}
+      - {x: 1.29, y: 0.84999996}
+      - {x: 1.3199999, y: 1.0799999}
+      - {x: 1.28, y: 1.13}
+      - {x: 0.37, y: 1.13}
+      - {x: 0.32, y: 1.0699999}
+      - {x: 0.32, y: 0.98999995}
+      - {x: 0.35, y: 0.93}
+      - {x: 0.38, y: 0.83}
+      - {x: 0.44, y: 0.83}
+      - {x: 0.45, y: 0.66999996}
+      - {x: 0.53999996, y: 0.21}
+      - {x: 0.51, y: 0.24}
+      - {x: -0.08, y: 0.75}
+      - {x: -0.26, y: 0.9}
+      - {x: -0.29, y: 0.9}
+      - {x: -0.37, y: 0.82}
+      - {x: -0.91999996, y: 0.16}
+      - {x: -0.96999997, y: 0.07}
+      - {x: -1.41, y: -0.45999998}
+      - {x: -1.41, y: -0.59}
+      - {x: -1.4, y: -0.68}
+      - {x: -1.3299999, y: -1.04}
+      - {x: -1.31, y: -1.12}
+      - {x: -1.3, y: -1.13}
+      - {x: 1.31, y: -1.13}
+      - {x: 1.3299999, y: -1.04}
+      - {x: 1.3299999, y: -0.96999997}
 --- !u!61 &61000012692598046
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -143,9 +191,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000005839756, y: 0.06728863}
   serializedVersion: 2
-  m_Size: {x: 2.75, y: 1.99}
+  m_Size: {x: 2.75, y: 1.8554227}
 --- !u!61 &61000013588107460
 BoxCollider2D:
   m_ObjectHideFlags: 1
