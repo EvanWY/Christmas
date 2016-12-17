@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour {
     public float initialHealth;
     public float damage;
     private float currentHealth;
+
 	// Use this for initialization
 	void Start () {
         currentHealth = initialHealth;
@@ -15,7 +16,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
     private void OnTriggerEnter2D(Collider2D collision)
