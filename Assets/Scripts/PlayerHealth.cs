@@ -27,10 +27,7 @@ public class PlayerHealth : MonoBehaviour {
             GameOver();
         }
 
-        if(!isDamaged && currentHealth < initialHealth)
-        {
-            currentHealth += addHealth * Time.deltaTime;
-        }
+        StartCoroutine(RegenerateHealth());
         Debug.Log(currentHealth);
     }
 
@@ -42,7 +39,7 @@ public class PlayerHealth : MonoBehaviour {
             currentHealth -= damage;
             Debug.Log("Collide with house, cause damage");
             //Debug.Log(currentHealth);
-            StartCoroutine(backFromInvincible(invincibleT));
+            StartCoroutine(BackFromInvincible(invincibleT));
         }
     }
 
@@ -51,9 +48,18 @@ public class PlayerHealth : MonoBehaviour {
         Debug.Log("Game over");
     }
 
-    IEnumerator backFromInvincible(float duration)
+    IEnumerator BackFromInvincible(float duration)
     {
         yield return new WaitForSeconds(duration);
         isDamaged = false;
+    }
+
+    IEnumerator RegenerateHealth()
+    {
+        yield return new WaitForSeconds(1f);
+        if(!isDamaged && currentHealth < initialHealth)
+        {
+            currentHealth += addHealth;
+        }
     }
 }
