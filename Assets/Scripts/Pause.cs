@@ -80,7 +80,7 @@ public class Pause : MonoBehaviour {
             }
             isPaused = true;
             pauseUI.SetActive(true);
-
+            Time.timeScale = 0f;
         }
     }
 
@@ -88,6 +88,7 @@ public class Pause : MonoBehaviour {
     {
         if (isPaused)
         {
+            Time.timeScale = 1f;
             isPaused = false;
             pauseUI.SetActive(false);
             StartCoroutine(CountDown());
