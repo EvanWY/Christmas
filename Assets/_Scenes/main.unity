@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37356392, g: 0.38112, b: 0.35887662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37356448, g: 0.3811204, b: 0.35887685, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1047,6 +1047,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1506964901}
   - 114: {fileID: 1506964902}
+  - 114: {fileID: 1506964903}
   m_Layer: 0
   m_Name: GameMap
   m_TagString: Untagged
@@ -1108,6 +1109,24 @@ MonoBehaviour:
   BuildingTypeRandomRange:
   - 0.3
   - 0.6
+--- !u!114 &1506964903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506964900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88ff6eae94a3974db03f7fa079b11a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pm: {fileID: 828076431}
+  count3: {fileID: 0}
+  count2: {fileID: 0}
+  count1: {fileID: 0}
+  go: {fileID: 0}
+  GameTime: 0
 --- !u!1 &1514941569
 GameObject:
   m_ObjectHideFlags: 0
