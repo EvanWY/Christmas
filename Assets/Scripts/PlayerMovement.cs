@@ -62,12 +62,14 @@ public class PlayerMovement : MonoBehaviour {
         if (!isInvincible && collision.CompareTag("Obstacle"))
         {
             StartCoroutine(Invincible(InvincibleTime));
+            ComboManager.ComboBreak();
             Debug.Log("Collide with house");
         }
 
         if (collision.CompareTag("Gift"))
         {
             Destroy(collision.gameObject);
+            ComboManager.ComboUp();
             Debug.Log("Gift delivered");
         }
     }
