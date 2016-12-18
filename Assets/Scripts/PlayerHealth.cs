@@ -13,12 +13,14 @@ public class PlayerHealth : MonoBehaviour {
     private float currentHealth;
     private float invincibleT;
     private bool isInvinciblePM;
+    private float halfHealth;
 
 	// Use this for initialization
 	void Start () {
         currentHealth = initialHealth;
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         invincibleT = pm.InvincibleTime;
+        halfHealth = initialHealth / 2.0f;
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,20 @@ public class PlayerHealth : MonoBehaviour {
         if(currentHealth <= 0f)
         {
             GameOver();
+        }
+
+        if(currentHealth >= initialHealth)
+        {
+            //Debug.Log("perfect state");
+        }
+
+        if( halfHealth <= currentHealth && currentHealth < initialHealth)
+        {
+            //Debug.Log("First hit");
+        }
+
+        if(0f < currentHealth && currentHealth < halfHealth){
+            //Debug.Log("Second hit");
         }
 
         StartCoroutine(RegenerateHealth());
