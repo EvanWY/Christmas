@@ -2413,28 +2413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: main
---- !u!1 &1721785596 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1755895072446962, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
-    type: 2}
-  m_PrefabInternal: {fileID: 2082137265}
---- !u!95 &1721785598
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1721785596}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ffb949cecfa91e64f81ded9aece64c3b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1738470578 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013753580192, guid: 73bf5683e061d3d49a35a9dc1e69f7ba,
@@ -3007,6 +2985,10 @@ Prefab:
     - target: {fileID: 198776126585153604, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
         type: 2}
       propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435488431937118, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
