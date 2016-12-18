@@ -21,6 +21,7 @@ public class Score : MonoBehaviour {
 	void Update () {
         gameTime = Time.time;
         timeScore = Mathf.RoundToInt(10 * Mathf.Pow(gameTime, 1.2f));
+        Debug.Log(totalScore);
 	}
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +31,7 @@ public class Score : MonoBehaviour {
             giftNum = ComboManager.currentComboNum;
             giftScore = Mathf.RoundToInt(Mathf.Pow(50, 1 + (0.05f) * giftNum));
             totalScore = timeScore + giftScore;
+            
         }
     }
 }
