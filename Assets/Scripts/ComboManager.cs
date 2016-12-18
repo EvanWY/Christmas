@@ -72,7 +72,7 @@ public class ComboManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Combo UI status: " + comboUI.enabled);
+		//Debug.Log ("Combo UI status: " + comboUI.enabled);
 		if(Input.GetKeyDown(KeyCode.Q)){
 			ComboManager.ComboUp ();
 		}

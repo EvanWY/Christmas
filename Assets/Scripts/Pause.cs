@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour {
     public float GameTime;
 
     private float pausedTime;
+    public GameObject pauseUI;
     private Background[] bg;
 
     void Start()
@@ -22,22 +23,22 @@ public class Pause : MonoBehaviour {
 
 	void Update () {
 
-        if (Input.GetKeyDown("space"))
-        {
-            if (!isPaused)
-            {
-                pm.enabled = false;
-                for (int i = 0; i < bg.Length; i++)
-                {
-                    bg[i].enabled = false;
-                }
-                isPaused = true;
-            }else
-            {
-                isPaused = false;
-                StartCoroutine(CountDown());
-            }
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    if (!isPaused)
+        //    {
+        //        pm.enabled = false;
+        //        for (int i = 0; i < bg.Length; i++)
+        //        {
+        //            bg[i].enabled = false;
+        //        }
+        //        isPaused = true;
+        //    }else
+        //    {
+        //        isPaused = false;
+        //        StartCoroutine(CountDown());
+        //    }
+        //}
    }
 
     IEnumerator CountDown()
@@ -66,6 +67,30 @@ public class Pause : MonoBehaviour {
             bg[i].enabled = true;
         }
         pm.enabled = true;
+    }
 
+    public void PauseGame()
+    {
+        if (!isPaused)
+        {
+            pm.enabled = false;
+            for (int i = 0; i < bg.Length; i++)
+            {
+                bg[i].enabled = false;
+            }
+            isPaused = true;
+            pauseUI.SetActive(true);
+
+        }
+    }
+
+    public void ResumeGame()
+    {
+        if (isPaused)
+        {
+            isPaused = false;
+            pauseUI.SetActive(false);
+            StartCoroutine(CountDown());
+        }
     }
 }
