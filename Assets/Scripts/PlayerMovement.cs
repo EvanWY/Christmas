@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool isInvincible;
 
     private BoxCollider2D bCollider;
-    private SpriteRenderer sRenderer;
+    private SpriteRenderer[] sRenderer;
 
     public void OnTouchStart()
     {
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour {
         OnTouchEnd();
 
         bCollider = GetComponent<BoxCollider2D>();
-        sRenderer = GetComponentInChildren<SpriteRenderer>();
+        sRenderer = GetComponentsInChildren<SpriteRenderer>();
     }
 
     float _tempVelocity;
@@ -83,11 +83,14 @@ public class PlayerMovement : MonoBehaviour {
         var startTime = Time.time;
         while (Time.time - startTime < InvincibleTime)
         {
-            sRenderer.enabled = !sRenderer.enabled;
+			foreach (var r in sRenderer)
+				r.enabled = !r.enabled;
+
             yield return new WaitForSeconds(FlashFrequency);
         }
 
-        sRenderer.enabled = true;
-        isInvincible = false;
+		foreach (var r in sRenderer)
+			r.enabled = !true;
+		isInvincible = false;
     }
 }
