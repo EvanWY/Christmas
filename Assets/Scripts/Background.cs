@@ -3,16 +3,21 @@ using System.Collections;
 
 public class Background : MonoBehaviour {
 
-    public float offsetSpeed;
+    public float cycleDistance;
+	public float cycleOffset;
+	public float initOffset;
     private SpriteRenderer rend;
+	Transform cameraTfm;
+
 	// Use this for initialization
 	void Start () {
         rend = GetComponent<SpriteRenderer>();
+		cameraTfm = Camera.main.transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        float offset = Time.time * offsetSpeed;
-        rend.material.mainTextureOffset = new Vector2(offset, 0);
+		transform.position = Vector3.right * (cameraTfm.position.x + cycleOffset /2  + ((cameraTfm.position.x + initOffset) % cycleDistance) * (-(cycleOffset) / cycleDistance));
 	}
+
 }
