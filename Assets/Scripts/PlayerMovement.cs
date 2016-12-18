@@ -68,8 +68,10 @@ public class PlayerMovement : MonoBehaviour {
 
         if (collision.CompareTag("Gift"))
         {
-            Destroy(collision.gameObject);
-            ComboManager.ComboUp();
+			//Destroy(collision.gameObject);
+			collision.gameObject.GetComponent<GiftController>().Collected();
+
+			ComboManager.ComboUp();
             Debug.Log("Gift delivered");
         }
     }
