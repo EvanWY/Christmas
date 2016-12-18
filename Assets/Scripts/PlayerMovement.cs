@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
 		foreach (var r in sRenderer)
-			r.enabled = !true;
+			r.enabled = true;
 		isInvincible = false;
     }
 }

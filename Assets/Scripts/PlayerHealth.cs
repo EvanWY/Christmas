@@ -21,33 +21,35 @@ public class PlayerHealth : MonoBehaviour {
         sRenderer = GetComponentInChildren<SpriteRenderer>();
         invincibleT = pm.InvincibleTime;
         halfHealth = initialHealth / 2.0f;
+
+		StartCoroutine(RegenerateHealth());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
         isInvinciblePM = pm.isInvincible;
-        if(currentHealth <= 0f)
+        if(currentHealth < 0f)
         {
             GameOver();
         }
 
-        if(currentHealth >= initialHealth)
-        {
-            //Debug.Log("perfect state");
-        }
+        //if(currentHealth >= initialHealth)
+        //{
+        //    //Debug.Log("perfect state");
+        //}
 
-        if( halfHealth <= currentHealth && currentHealth < initialHealth)
-        {
-            //Debug.Log("First hit");
-        }
+        //if( halfHealth <= currentHealth && currentHealth < initialHealth)
+        //{
+        //    //Debug.Log("First hit");
+        //}
 
-        if(0f < currentHealth && currentHealth < halfHealth){
-            //Debug.Log("Second hit");
-        }
+        //if(0f < currentHealth && currentHealth < halfHealth){
+        //    //Debug.Log("Second hit");
+        //}
+		//Debug.Log(currentHealth);
 
-        StartCoroutine(RegenerateHealth());
-        //Debug.Log(currentHealth);
+		GetComponent<Animator>().SetFloat("hp", currentHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,10 +77,13 @@ public class PlayerHealth : MonoBehaviour {
 
     IEnumerator RegenerateHealth()
     {
-        yield return new WaitForSeconds(1f);
-        if(!isDamaged && currentHealth < initialHealth)
-        {
-            currentHealth += addHealth;
-        }
+		for (; ;) {
+			yield return new WaitForSeconds(1f);
+			if (!isDamaged) {
+				currentHealth += addHealth;
+				if (currentHealth > initialHealth)
+					currentHealth = initialHealth;
+			}
+		}
     }
 }
