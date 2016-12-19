@@ -10,7 +10,8 @@ public class Bird : MonoBehaviour {
     public float startingPointOffset;
     public float birdSpeed;
 
-    private Transform startingPoint;
+    public Transform startingPoint;
+    private float rnd;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,8 +20,9 @@ public class Bird : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         startingPoint.position = playerCharacter.transform.position + new Vector3(startingPointOffset, 0, 0);
-        float rnd = Random.Range(0, 1);
-        if(rnd <= birdLaunchRandomRange)
+        float rnd = Random.Range(0f, 1f);
+
+        if(rnd < birdLaunchRandomRange)
         {
             var bird = Instantiate(birdInstance, startingPoint);
             bird.transform.Translate(Vector3.left * birdSpeed * Time.deltaTime);
