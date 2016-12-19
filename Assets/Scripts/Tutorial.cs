@@ -74,7 +74,7 @@ public class Tutorial : MonoBehaviour {
         {
             currentPage.GetComponent<Animator>().SetTrigger("NextPage");
 
-            currentPage.SetActive(false);
+            //currentPage.SetActive(false);
             currentPageNum++;
             tutorialPages[currentPageNum].SetActive(true);
             currentPage = tutorialPages[currentPageNum];
@@ -90,12 +90,9 @@ public class Tutorial : MonoBehaviour {
 
         if (tutorialActivated)
         {
-            currentPage.GetComponent<Animator>().SetTrigger("PreviousPage");
-            currentPage.SetActive(false);
+            tutorialPages[currentPageNum - 1].GetComponent<Animator>().SetTrigger("PreviousPage");
             currentPageNum--;
-            tutorialPages[currentPageNum].SetActive(true);
             currentPage = tutorialPages[currentPageNum];
-            currentPage.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         }
     }
 }
