@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Width: 3
-  Height: 3
+  Height: 2.16
   buildingType: 0
 --- !u!114 &114717141189082164
 MonoBehaviour:

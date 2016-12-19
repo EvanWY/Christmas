@@ -31,23 +31,32 @@ public class PlayerMovement : MonoBehaviour {
         TargetVirticalSpeed = -MaxVirticalSpeed;
     }
 
+	float startTime = 0;
     void Start()
     {
         OnTouchEnd();
 
         bCollider = GetComponent<BoxCollider2D>();
         sRenderer = GetComponentsInChildren<SpriteRenderer>();
-    }
+
+		startTime = Time.time;
+
+	}
 
     float _tempVelocity;
 
 
 	void Update () {
+
         var y = transform.position.y;
         var x = transform.position.x;
 
-        y = Mathf.Clamp(y + VirticalSpeed * Time.deltaTime, MinHeight, MaxHeight);
-        x = x + ForwardSpeed * Time.deltaTime;
+		if (Time.time - startTime > 4f)
+			y = Mathf.Clamp(y + VirticalSpeed * Time.deltaTime, MinHeight, MaxHeight);
+		else
+			VirticalSpeed = 0;
+
+		x = x + ForwardSpeed * Time.deltaTime;
 
         transform.position = new Vector3(x, y, transform.position.z);
 

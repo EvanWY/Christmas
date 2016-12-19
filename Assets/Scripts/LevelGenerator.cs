@@ -18,7 +18,10 @@ public class LevelGenerator : MonoBehaviour {
 
 	public float[] BuildingTypeRandomRange;
 
+	int buildingIndex = 0;
+
 	void generateBuilding() {
+		
 		GameObject newBuilding = Instantiate(BuildingPrefabs.RandElement());
 		GameObject lastBuilding = buildings.Count > 0 ? buildings[buildings.Count - 1] : null;
 
@@ -26,7 +29,7 @@ public class LevelGenerator : MonoBehaviour {
 		BuildingType newBuildingType;
 
 		float rnd = Random.Range(0f, 1f);
-		if (rnd < BuildingTypeRandomRange[0]) {
+		if (rnd < BuildingTypeRandomRange[0] || buildingIndex < 7) {
 			newBuildingType = BuildingType.None;
 		}
 		else if (rnd < BuildingTypeRandomRange[1]) {
@@ -54,6 +57,7 @@ public class LevelGenerator : MonoBehaviour {
 		}
 		
 		buildings.Add(newBuilding);
+		buildingIndex++;
 	}
 
 	void deleteBuilding() {
