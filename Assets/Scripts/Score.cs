@@ -10,23 +10,27 @@ public class Score : MonoBehaviour {
     public int giftScore;
     public int giftNum;
     public Text scoreText;
+	public Text giftNumText;
 
-    private float gameTime;
+	private float gameTime;
     private bool manuallyPaused;
-    
-	// Use this for initialization
-	void Start () {
 
+	// Use this for initialization
+	float startTime;
+	void Start () {
+		startTime = Time.time;
+		giftScore = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        gameTime = Time.time;
+        gameTime = Time.time - startTime;
         timeScore = Mathf.RoundToInt(1.5f * Mathf.Pow(gameTime, 1.1f));
         totalScore = timeScore + giftScore;
         giftNum = ComboManager.currentComboNum;
         scoreText.text = totalScore.ToString();
-        //Debug.Log(totalScore);
+		giftNumText.text = ComboManager.GiftSentNum.ToString();
+		//Debug.Log(totalScore);
 	}
 
     void OnTriggerEnter2D(Collider2D collision)

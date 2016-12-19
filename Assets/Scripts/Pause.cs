@@ -22,55 +22,6 @@ public class Pause : MonoBehaviour {
         bg = GetComponentsInChildren<Background>();
     }
 
-	void Update () {
-
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    if (!isPaused)
-        //    {
-        //        pm.enabled = false;
-        //        for (int i = 0; i < bg.Length; i++)
-        //        {
-        //            bg[i].enabled = false;
-        //        }
-        //        isPaused = true;
-        //    }else
-        //    {
-        //        isPaused = false;
-        //        StartCoroutine(CountDown());
-        //    }
-        //}
-   }
-
-    IEnumerator CountDown()
-    {
-        //count3.SetActive(true);
-        //yield return new WaitForSeconds(1);
-
-        //count3.SetActive(false);
-        //count2.SetActive(true);
-        //yield return new WaitForSeconds(1);
-
-        //count2.SetActive(false);
-        //count1.SetActive(true);
-        //yield return new WaitForSeconds(1);
-
-        //count1.SetActive(false);
-        //go.SetActive(true);
-
-        //yield return new WaitForSeconds(1);
-        //go.SetActive(false);
-
-        yield return new WaitForSeconds(3f);
-
-        for (int i = 0; i < bg.Length; i++)
-        {
-            bg[i].enabled = true;
-        }
-        pm.enabled = true;
-        score.enabled = true;
-    }
-
     public void PauseGame()
     {
         if (!isPaused)
@@ -86,15 +37,30 @@ public class Pause : MonoBehaviour {
         }
     }
 
+	bool isResuming = false;
+	float startResumeRealTime;
+
     public void ResumeGame()
     {
         if (isPaused)
         {
-            Time.timeScale = 1f;
             score.enabled = false;
             isPaused = false;
             pauseUI.SetActive(false);
-            StartCoroutine(CountDown());
-        }
+			isResuming = true;
+			startResumeRealTime = Time.unscaledTime;
+		}
     }
+
+	void Update() {
+		if (isResuming && Time.unscaledTime - startResumeRealTime > 4f) {
+			for (int i = 0; i < bg.Length; i++) {
+				bg[i].enabled = true;
+			}
+			pm.enabled = true;
+			score.enabled = true;
+			Time.timeScale = 1f;
+			isResuming = false;
+		}
+	}
 }

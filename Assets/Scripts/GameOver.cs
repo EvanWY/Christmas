@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour {
         comboSystem.enabled = false;
         movementSystem.enabled = false;
         pauseButtom.SetActive(false);
-        scoreOnCanvas.SetActive(false);
+        //scoreOnCanvas.SetActive(false);
         comboUI.SetActive(false);
         StartCoroutine(ShowGameOver());
 	}
@@ -36,6 +36,6 @@ public class GameOver : MonoBehaviour {
         yield return new WaitForSeconds(2.5f);
         gameOverPanel.SetActive(true);
         totalScore.text = scoreSystem.totalScore.ToString();
-        highestGiftNumber.text = ComboManager.highestComboNum.ToString();
+        highestGiftNumber.text = ComboManager.GiftSentNum.ToString();
     }
 }

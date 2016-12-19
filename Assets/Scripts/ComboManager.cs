@@ -18,6 +18,7 @@ public class ComboManager : MonoBehaviour {
 	/// The current combo number.
 	/// </summary>
 	public static int currentComboNum;
+	public static int GiftSentNum;
     public static int highestComboNum;
 
 	static int comboNum_Display;
@@ -38,9 +39,10 @@ public class ComboManager : MonoBehaviour {
 		}
 			
 		comboNum_Display += 1;
+		GiftSentNum++;
 		currentComboNum += 1;
 		AudioPlay.PlaySound (aus, comboUpSounds_static [0]);
-		comboUI_static.text = comboNum_Display.ToString ();
+		comboUI_static.text = comboNum_Display.ToString () + "\n<size=96>combo</size>";
 		comboUI_static.enabled = true;
 		anim_UI.SetTrigger ("Up");
 		//to do: play different clips based on current combo Num;
@@ -68,6 +70,9 @@ public class ComboManager : MonoBehaviour {
 		comboUI_static = comboUI; 
 		comboUI.enabled = false;
 		anim_UI = comboUI_static.GetComponent<Animator> ();
+		GiftSentNum = 0;
+		currentComboNum = 0;
+		highestComboNum = 0;
 	}
 
 
