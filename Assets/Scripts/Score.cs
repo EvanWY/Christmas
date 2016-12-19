@@ -22,7 +22,7 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         gameTime = Time.time;
-        timeScore = Mathf.RoundToInt(1.5 * Mathf.Pow(gameTime, 1.1f));
+        timeScore = Mathf.RoundToInt(1.5f * Mathf.Pow(gameTime, 1.1f));
         totalScore = timeScore + giftScore;
         giftNum = ComboManager.currentComboNum;
         scoreText.text = totalScore.ToString();
