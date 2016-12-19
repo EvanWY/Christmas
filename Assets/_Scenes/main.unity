@@ -1016,6 +1016,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1972827171453104, guid: 43444c2db14e416408cbf38f4775cbac, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43444c2db14e416408cbf38f4775cbac, type: 2}
   m_IsPrefabParent: 0
@@ -2482,6 +2486,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254837793}
+--- !u!1 &1271765752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1271765754}
+  - component: {fileID: 1271765753}
+  m_Layer: 0
+  m_Name: BirdSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1271765753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271765752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a86e049205db4241b27e50804addeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdLaunchRandomRange: 0.6
+  birdInstance: {fileID: 1972827171453104, guid: 43444c2db14e416408cbf38f4775cbac,
+    type: 2}
+  playerCharacter: {fileID: 828076429}
+  startingPointOffset: 15
+  startingPoint: {fileID: 1900157266}
+--- !u!4 &1271765754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271765752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4241632, y: 2.5385168, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1453871498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,8 +2824,8 @@ MonoBehaviour:
   MaxBuildingDistance: 10
   buildingBase: {fileID: 1053156842}
   BuildingTypeRandomRange:
+  - 0.3
   - 0.7
-  - 0.76
 --- !u!114 &1506964903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3742,6 +3792,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010573066756, guid: 04b5d46ae1362534689326729664aacd,
     type: 2}
   m_PrefabInternal: {fileID: 222568666}
+--- !u!1 &1900157265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1900157266}
+  m_Layer: 0
+  m_Name: BirdStartingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900157266
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900157265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4241632, y: 2.5385168, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928725449
 GameObject:
   m_ObjectHideFlags: 0
