@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+		Debug.Log (collision.name);
+
         if (!isInvincible && collision.CompareTag("Obstacle"))
         {
             StartCoroutine(Invincible(InvincibleTime));
@@ -71,6 +73,7 @@ public class PlayerMovement : MonoBehaviour {
 			//Destroy(collision.gameObject);
 			collision.gameObject.GetComponent<GiftController>().Collected();
 
+			TimeManager.AddTime (3.5f);
 			ComboManager.ComboUp();
             Debug.Log("Gift delivered");
         }

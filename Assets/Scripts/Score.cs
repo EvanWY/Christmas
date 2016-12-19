@@ -26,7 +26,7 @@ public class Score : MonoBehaviour {
         totalScore = timeScore + giftScore;
         giftNum = ComboManager.currentComboNum;
         scoreText.text = totalScore.ToString();
-        Debug.Log(totalScore);
+        //Debug.Log(totalScore);
 	}
 
     void OnTriggerEnter2D(Collider2D collision)
