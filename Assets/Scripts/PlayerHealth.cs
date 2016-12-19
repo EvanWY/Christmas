@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour {
     public float damage;
     public float addHealth;
     public PlayerMovement pm;
+    public GameOver gameOverSystem;
 
     private SpriteRenderer sRenderer;
     private float currentHealth;
@@ -31,7 +32,7 @@ public class PlayerHealth : MonoBehaviour {
         isInvinciblePM = pm.isInvincible;
         if(currentHealth < 0f)
         {
-            GameOver();
+            gameOverSystem.enabled = true;
         }
 
         //if(currentHealth >= initialHealth)
@@ -62,11 +63,6 @@ public class PlayerHealth : MonoBehaviour {
             //Debug.Log(currentHealth);
             StartCoroutine(BackFromInvincible(invincibleT));
         }
-    }
-
-    private void GameOver()
-    {
-        Debug.Log("Game over");
     }
 
     IEnumerator BackFromInvincible(float duration)

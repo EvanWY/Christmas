@@ -17,7 +17,7 @@ public class Background : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Vector3.right * (cameraTfm.position.x + cycleOffset /2  + ((cameraTfm.position.x + initOffset) % cycleDistance) * (-(cycleOffset) / cycleDistance));
+		transform.localPosition = Vector3.right * (cameraTfm.position.x + cycleOffset /2  + ((cameraTfm.position.x + initOffset) % cycleDistance) * (-(cycleOffset) / cycleDistance));
 	}
 
 }

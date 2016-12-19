@@ -300,8 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 884ebf8bb4775534fa4f7cb534499103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Width: 2
-  Height: 2
+  Width: 2.7
+  Height: 2.5
   buildingType: 0
 --- !u!114 &114403694192854316
 MonoBehaviour:
@@ -369,7 +369,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 265023767
+  randomSeed: -1952474651
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2917,7 +2917,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

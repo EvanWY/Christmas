@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour {
 	void Update () {
         if (tutorialActivated)
         {
-            if(currentPageNum == 3)
+            if(currentPageNum == 2)
             {
                 nextPageButtom.SetActive(false);
             }
@@ -52,7 +52,7 @@ public class Tutorial : MonoBehaviour {
         tutorialPages[0].SetActive(true);
         tutorialPages[1].SetActive(false);
         tutorialPages[2].SetActive(false);
-        tutorialPages[3].SetActive(false);
+        //tutorialPages[3].SetActive(false);
         currentPage = tutorialPages[0];
         currentPageNum = 0;
     }
