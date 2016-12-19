@@ -18,7 +18,7 @@ public class ComboManager : MonoBehaviour {
 	/// The current combo number.
 	/// </summary>
 	public static int currentComboNum;
-
+    public static int highestComboNum;
 
 	static int comboNum_Display;
 	static AudioSource aus;
@@ -44,6 +44,7 @@ public class ComboManager : MonoBehaviour {
 		comboUI_static.enabled = true;
 		anim_UI.SetTrigger ("Up");
 		//to do: play different clips based on current combo Num;
+        
 	}
 
 	/// <summary>
@@ -82,6 +83,11 @@ public class ComboManager : MonoBehaviour {
 		else if(Input.GetKeyDown(KeyCode.A)){
 			Debug.Log ("Current Combo: " + ComboManager.currentComboNum);
 		}
+
+        if(highestComboNum <= currentComboNum)
+        {
+            highestComboNum = currentComboNum;
+        }
 
 	}
 }
