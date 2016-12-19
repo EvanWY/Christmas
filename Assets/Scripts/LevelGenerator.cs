@@ -50,7 +50,7 @@ public class LevelGenerator : MonoBehaviour {
 
 			float maxDist = minDist + MaxBuildingDistance;
 
-			newBuilding.transform.localPosition = Vector3.right * (Mathf.Lerp(minDist, maxDist, Mathf.Clamp01(Random.Range(-5f, 1f))) + lastBuilding.transform.localPosition.x);
+			newBuilding.transform.localPosition = Vector3.right * (Mathf.Lerp(minDist, maxDist, Mathf.Clamp01(Random.Range(-3f, 1f))) + lastBuilding.transform.localPosition.x);
 		}
 		else {
 			newBuilding.transform.localPosition = Vector3.zero;
