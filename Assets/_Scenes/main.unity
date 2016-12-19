@@ -878,6 +878,9 @@ MonoBehaviour:
   movementSystem: {fileID: 828076431}
   totalScore: {fileID: 821579213}
   highestGiftNumber: {fileID: 894363926}
+  pauseButtom: {fileID: 962241278}
+  scoreOnCanvas: {fileID: 430193543}
+  comboUI: {fileID: 2121243504}
 --- !u!4 &368100935
 Transform:
   m_ObjectHideFlags: 0
@@ -1058,7 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.01703071, g: 0.06784319, b: 0.1102941, a: 0.392}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1517,7 +1520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1665,7 +1668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2415,7 +2418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.01703071, g: 0.06784319, b: 0.1102941, a: 0.392}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3801,6 +3804,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2121243504 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1791227353394058, guid: 38e969f58788948ee8252ab7286262d3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1239410007}
 --- !u!114 &2142623357 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114711077892396834, guid: 18f43dbf665ec45d081b73bffe996c15,
