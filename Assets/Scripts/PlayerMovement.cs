@@ -85,14 +85,19 @@ public class PlayerMovement : MonoBehaviour {
         var startTime = Time.time;
         while (Time.time - startTime < InvincibleTime)
         {
-			foreach (var r in sRenderer)
-				r.enabled = !r.enabled;
+			foreach (var r in sRenderer) {
+				r.color = new Color(1, 1, 1, 0.4f);
+			}
 
-            yield return new WaitForSeconds(FlashFrequency);
-        }
+            yield return new WaitForSeconds(FlashFrequency * 0.3f);
 
-		foreach (var r in sRenderer)
-			r.enabled = true;
+			foreach (var r in sRenderer) {
+				r.color = new Color(1, 1, 1, 1f);
+			}
+
+			yield return new WaitForSeconds(FlashFrequency * 0.7f);
+		}
+
 		isInvincible = false;
     }
 }
