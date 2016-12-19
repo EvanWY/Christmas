@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour {
     public GameObject count2;
     public GameObject count1;
     public GameObject go;
+    public Score score;
 
     public float GameTime;
 
@@ -67,6 +68,7 @@ public class Pause : MonoBehaviour {
             bg[i].enabled = true;
         }
         pm.enabled = true;
+        score.enabled = true;
     }
 
     public void PauseGame()
@@ -89,6 +91,7 @@ public class Pause : MonoBehaviour {
         if (isPaused)
         {
             Time.timeScale = 1f;
+            score.enabled = false;
             isPaused = false;
             pauseUI.SetActive(false);
             StartCoroutine(CountDown());

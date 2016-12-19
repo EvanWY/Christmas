@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Score : MonoBehaviour {
@@ -8,6 +9,7 @@ public class Score : MonoBehaviour {
     public int totalScore;
     public int giftScore;
     public int giftNum;
+    public Text scoreText;
 
     private float gameTime;
     private bool manuallyPaused;
@@ -21,6 +23,9 @@ public class Score : MonoBehaviour {
 	void Update () {
         gameTime = Time.time;
         timeScore = Mathf.RoundToInt(10 * Mathf.Pow(gameTime, 1.2f));
+        totalScore = timeScore + giftScore;
+        giftNum = ComboManager.currentComboNum;
+        scoreText.text = totalScore.ToString();
         Debug.Log(totalScore);
 	}
 
@@ -28,10 +33,8 @@ public class Score : MonoBehaviour {
     {
         if (collision.CompareTag("Gift"))
         {
-            giftNum = ComboManager.currentComboNum;
             giftScore = Mathf.RoundToInt(Mathf.Pow(50, 1 + (0.05f) * giftNum));
-            totalScore = timeScore + giftScore;
-            
+            totalScore += giftScore;
         }
     }
 }
