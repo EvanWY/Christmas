@@ -22,7 +22,7 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         gameTime = Time.time;
-        timeScore = Mathf.RoundToInt(10 * Mathf.Pow(gameTime, 1.2f));
+        timeScore = Mathf.RoundToInt(1.5 * Mathf.Pow(gameTime, 1.1f));
         totalScore = timeScore + giftScore;
         giftNum = ComboManager.currentComboNum;
         scoreText.text = totalScore.ToString();
@@ -33,8 +33,8 @@ public class Score : MonoBehaviour {
     {
         if (collision.CompareTag("Gift"))
         {
-            giftScore = Mathf.RoundToInt(Mathf.Pow(50, 1 + (0.05f) * giftNum));
-            totalScore += giftScore;
+            giftScore += Mathf.RoundToInt(Mathf.Pow(30, 1 + (0.05f) * giftNum));
+            //totalScore += giftScore;
         }
     }
 }
