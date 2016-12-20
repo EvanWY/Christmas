@@ -33,6 +33,8 @@ public class GameOver : MonoBehaviour {
 
     IEnumerator ShowGameOver()
     {
+		SaveLoad.UpdateNewScore(scoreSystem.totalScore);
+
         yield return new WaitForSeconds(2.5f);
         gameOverPanel.SetActive(true);
         totalScore.text = scoreSystem.totalScore.ToString();

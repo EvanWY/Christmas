@@ -41,4 +41,9 @@ public class Score : MonoBehaviour {
             //totalScore += giftScore;
         }
     }
+
+	private void OnDisable() {
+		Debug.Log("OnDisable score store " + totalScore);
+		SaveLoad.UpdateNewScore(totalScore);
+	}
 }
