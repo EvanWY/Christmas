@@ -10,7 +10,7 @@ public class OnClickLoadScene : MonoBehaviour {
 	void Awake() {
 		GetComponent<Button>().onClick.AddListener(() => {
 			Time.timeScale = 1f;
-			SceneManager.LoadScene(sceneName);
+			SceneManager.LoadSceneAsync(sceneName);
 		});
 	}
 }
