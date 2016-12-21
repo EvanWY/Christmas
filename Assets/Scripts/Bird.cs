@@ -10,9 +10,14 @@ public class Bird : MonoBehaviour {
     public float startingPointOffset;
 
     public Transform startingPoint;
+
+	float startTime;
+
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(GenBird());
+		startTime = Time.time;
+
+		StartCoroutine(GenBird());
 	}
 	
 	// Update is called once per frame
@@ -20,8 +25,8 @@ public class Bird : MonoBehaviour {
         yield return new WaitForSeconds(4f);
         for (;;)
         {
-            float minRange = (1 / (Mathf.Pow(3, (Time.time / 60)))) * 6 + 1;
-            float maxRange = (1 / (Mathf.Pow(3, (Time.time / 60)))) * 10 + 2;
+            float minRange = (1 / (Mathf.Pow(3, ((Time.time - startTime) / 60)))) * 6 + 1;
+            float maxRange = (1 / (Mathf.Pow(3, ((Time.time - startTime) / 60)))) * 10 + 2;
             Debug.Log(minRange);
             Debug.Log(maxRange);
             startingPoint.position = playerCharacter.transform.position + new Vector3(startingPointOffset, 0, 0);
