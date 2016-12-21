@@ -54,3 +54,16 @@ MonoBehaviour:
   bigButtonPress: {fileID: 8300000, guid: 489c24915f7c942b8a1572e8894b5bc4, type: 3}
   nextPagePress: {fileID: 8300000, guid: d6fcd1595c3394252a8464d2fe1db376, type: 3}
   closeButton: {fileID: 8300000, guid: 52433b114da7441bba682a418f1ddc49, type: 3}
+  santaFly0: {fileID: 0}
+  santaFly1: {fileID: 0}
+  santaFly2: {fileID: 0}
+  santaDamaged: {fileID: 0}
+  presentDelivered: {fileID: 0}
+  birdFly: {fileID: 0}
+  pauseButton: {fileID: 8300000, guid: 6ce309726b51d4050adde8f7e4e8455f, type: 3}
+  comboUp: {fileID: 8300000, guid: 966e3dc81f5c63b4c84ebff0a2b0c98b, type: 3}
+  comboBreak: {fileID: 8300000, guid: ee22d1d124312bf49b6ef2bd8357c643, type: 3}
+  countDown3: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
+  countDown2: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
+  countDown1: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
+  countDownGo: {fileID: 8300000, guid: 780ad56bae4024440b773a2fdd0af464, type: 3}

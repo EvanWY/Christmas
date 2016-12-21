@@ -3294,41 +3294,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: pauseButton
-      value: 
-      objectReference: {fileID: 8300000, guid: 6ce309726b51d4050adde8f7e4e8455f, type: 3}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: countDown3
-      value: 
-      objectReference: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: countDown2
-      value: 
-      objectReference: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: countDown1
-      value: 
-      objectReference: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: countDownGo
-      value: 
-      objectReference: {fileID: 8300000, guid: 780ad56bae4024440b773a2fdd0af464, type: 3}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: comboUp
-      value: 
-      objectReference: {fileID: 8300000, guid: 966e3dc81f5c63b4c84ebff0a2b0c98b, type: 3}
-    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
-        type: 2}
-      propertyPath: comboBreak
-      value: 
-      objectReference: {fileID: 8300000, guid: ee22d1d124312bf49b6ef2bd8357c643, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b99c4e163505a43fbb1e4e8c80cde2d4, type: 2}
   m_IsPrefabParent: 0
