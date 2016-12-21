@@ -17,9 +17,12 @@ public class Pause : MonoBehaviour {
     public GameObject pauseUI;
     private Background[] bg;
 
+	AudioSource aus;
+
     void Start()
     {
         bg = GetComponentsInChildren<Background>();
+		aus = GetComponent<AudioSource> ();
     }
 
     public void PauseGame()
@@ -34,6 +37,7 @@ public class Pause : MonoBehaviour {
             isPaused = true;
             pauseUI.SetActive(true);
             Time.timeScale = 0f;
+			AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["pauseButton"]);
         }
     }
 
@@ -49,6 +53,7 @@ public class Pause : MonoBehaviour {
             pauseUI.SetActive(false);
 			isResuming = true;
 			startResumeRealTime = Time.unscaledTime;
+			AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["bigButtonPress"]);
 		}
     }
 

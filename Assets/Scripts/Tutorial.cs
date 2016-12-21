@@ -17,9 +17,13 @@ public class Tutorial : MonoBehaviour {
 
     private Vector3 originalPosition;
     public int currentPageNum;
+
+	AudioSource aus;
+
 	// Use this for initialization
 	void Start () {
         currentPageNum = 0;
+		aus = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -61,6 +65,7 @@ public class Tutorial : MonoBehaviour {
     {
         tutorialPanel.SetActive(false);
         tutorialActivated = false;
+		AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["closeButton"]);
     }
 
     public void NextPage()
@@ -78,6 +83,7 @@ public class Tutorial : MonoBehaviour {
             currentPageNum++;
             tutorialPages[currentPageNum].SetActive(true);
             currentPage = tutorialPages[currentPageNum];
+			AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["nextPagePress"]);
         }
     }
 
@@ -93,6 +99,7 @@ public class Tutorial : MonoBehaviour {
             tutorialPages[currentPageNum - 1].GetComponent<Animator>().SetTrigger("PreviousPage");
             currentPageNum--;
             currentPage = tutorialPages[currentPageNum];
+			AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["nextPagePress"]);
         }
     }
 }

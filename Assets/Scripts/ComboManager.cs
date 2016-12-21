@@ -41,7 +41,7 @@ public class ComboManager : MonoBehaviour {
 		comboNum_Display += 1;
 		GiftSentNum++;
 		currentComboNum += 1;
-		AudioPlay.PlaySound (aus, comboUpSounds_static [0]);
+		AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["comboUp"]);
 		comboUI_static.text = comboNum_Display.ToString () + "\n<size=96>combo</size>";
 		comboUI_static.enabled = true;
 		anim_UI.SetTrigger ("Up");
@@ -55,7 +55,7 @@ public class ComboManager : MonoBehaviour {
 	public static void ComboBreak(){
 		if (comboNum_Display > 0) {
 			anim_UI.SetTrigger ("Break");
-			AudioPlay.PlaySound (aus, comboBreakSound_static);
+			AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["comboBreak"]);
 		}
 			
 		currentComboNum = 0;
