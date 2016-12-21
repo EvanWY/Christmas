@@ -53,9 +53,10 @@ public class ComboManager : MonoBehaviour {
 	/// Call this method to break the combo.
 	/// </summary>
 	public static void ComboBreak(){
+		//AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["comboBreak"]);
+
 		if (comboNum_Display > 0) {
 			anim_UI.SetTrigger ("Break");
-			AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["comboBreak"]);
 		}
 			
 		currentComboNum = 0;

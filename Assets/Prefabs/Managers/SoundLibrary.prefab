@@ -60,7 +60,7 @@ MonoBehaviour:
   santaDamaged: {fileID: 0}
   presentDelivered: {fileID: 0}
   birdFly: {fileID: 0}
-  pauseButton: {fileID: 8300000, guid: 6ce309726b51d4050adde8f7e4e8455f, type: 3}
+  pauseButton: {fileID: 8300000, guid: 489c24915f7c942b8a1572e8894b5bc4, type: 3}
   comboUp: {fileID: 8300000, guid: 966e3dc81f5c63b4c84ebff0a2b0c98b, type: 3}
   comboBreak: {fileID: 8300000, guid: ee22d1d124312bf49b6ef2bd8357c643, type: 3}
   countDown3: {fileID: 8300000, guid: c5449eebe04653246b353bebac6bc828, type: 3}
