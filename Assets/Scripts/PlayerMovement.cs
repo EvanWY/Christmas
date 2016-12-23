@@ -68,13 +68,13 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-		Debug.Log (collision.name);
+		//Debug.Log (collision.name);
 
         if (!isInvincible && collision.CompareTag("Obstacle"))
         {
             StartCoroutine(Invincible(InvincibleTime));
             ComboManager.ComboBreak();
-            Debug.Log("Collide with house");
+            //Debug.Log("Collide with house");
         }
 
         if (collision.CompareTag("Gift"))
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour {
 
 			TimeManager.AddTime (3.5f);
 			ComboManager.ComboUp();
-            Debug.Log("Gift delivered");
+            //Debug.Log("Gift delivered");
         }
     }
 

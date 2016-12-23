@@ -43,7 +43,7 @@ public class Score : MonoBehaviour {
     }
 
 	private void OnDisable() {
-		Debug.Log("OnDisable score store " + totalScore);
+		//Debug.Log("OnDisable score store " + totalScore);
 		SaveLoad.UpdateNewScore(totalScore);
 	}
 }
