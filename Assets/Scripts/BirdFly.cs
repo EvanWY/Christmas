@@ -7,9 +7,15 @@ public class BirdFly : MonoBehaviour {
     private float birdSpeed;
 	public float startTime;
 	public AnimationCurve speedProb;
+
+	public Collider2D cadanCol;
+	public Collider2D birdCol;
+
+	Rigidbody2D rigid;
+	Animator anim;
 	// Use this for initialization
 	void Start () {
-        
+		anim = GetComponent<Animator> ();
 		SetSpeed ();
 
     }
@@ -24,7 +30,7 @@ public class BirdFly : MonoBehaviour {
 		float x = UnityEngine.Random.Range (0f, 1f);
 		maxRange = minRange + scaledRange * speedProb.Evaluate (x);
 		birdSpeed = Random.Range(minRange, maxRange);
-		Debug.Log ("Bird speed: " + birdSpeed);
+		//Debug.Log ("Bird speed: " + birdSpeed);
 	}
 
 	// Update is called once per frame
@@ -32,5 +38,18 @@ public class BirdFly : MonoBehaviour {
 
         this.transform.Translate(Vector3.left * birdSpeed * Time.deltaTime);
 	}
-		
+
+	public void BirdGG(){
+		if(!rigid)
+			rigid = gameObject.AddComponent<Rigidbody2D> ();
+		birdCol.isTrigger = false;
+		anim.SetTrigger ("gg");
+	}
+
+	/// <summary>
+	/// Will be called After the bird deals damage.
+	/// </summary>
+	public void AfterEffect(){
+		cadanCol.enabled = false;
+	}
 }

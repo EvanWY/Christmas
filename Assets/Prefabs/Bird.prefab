@@ -59,6 +59,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1821907977433906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4422954797829134}
+  - component: {fileID: 70166810630826894}
+  m_Layer: 0
+  m_Name: Cadan
+  m_TagString: Cadan
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1972827171453104
 GameObject:
   m_ObjectHideFlags: 0
@@ -69,7 +85,7 @@ GameObject:
   - component: {fileID: 4472795569181250}
   - component: {fileID: 95624073142113912}
   - component: {fileID: 114324649868476684}
-  - component: {fileID: 58145780459818178}
+  - component: {fileID: 70281295780491244}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Obstacle
@@ -90,6 +106,19 @@ Transform:
   m_Father: {fileID: 4472795569181250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4422954797829134
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821907977433906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.57, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4472795569181250}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4472795569181250
 Transform:
   m_ObjectHideFlags: 1
@@ -103,6 +132,7 @@ Transform:
   - {fileID: 4347261255147532}
   - {fileID: 4836516036558250}
   - {fileID: 4520861114959466}
+  - {fileID: 4422954797829134}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,8 +162,22 @@ Transform:
   m_Father: {fileID: 4472795569181250}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58145780459818178
-CircleCollider2D:
+--- !u!70 &70166810630826894
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821907977433906}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.12743613, y: 0.985893}
+  m_Size: {x: 5.3331594, y: 1.2549484}
+  m_Direction: 1
+--- !u!70 &70281295780491244
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -143,9 +187,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.2273695
+  m_Offset: {x: -0.22907734, y: -0.3164196}
+  m_Size: {x: 5.262147, y: 2.4714007}
+  m_Direction: 1
 --- !u!95 &95624073142113912
 Animator:
   serializedVersion: 3
@@ -211,6 +255,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  cadanCol: {fileID: 70166810630826894}
+  birdCol: {fileID: 70281295780491244}
 --- !u!212 &212124246428236890
 SpriteRenderer:
   m_ObjectHideFlags: 1

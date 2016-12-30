@@ -60,7 +60,7 @@ public class PlayerHealth : MonoBehaviour {
             isDamaged = true;
             currentHealth -= damage;
 			AudioPlay.PlaySound (GetComponent<AudioSource>(), SoundLibrary.clipDictionary["comboBreak"]);
-            Debug.Log("Collide with house, cause damage");
+            //Debug.Log("Collide with house, cause damage");
             //Debug.Log(currentHealth);
             StartCoroutine(BackFromInvincible(invincibleT));
         }
