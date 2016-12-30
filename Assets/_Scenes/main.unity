@@ -1536,6 +1536,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1972827171453104, guid: 43444c2db14e416408cbf38f4775cbac, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43444c2db14e416408cbf38f4775cbac, type: 2}
   m_IsPrefabParent: 0
@@ -3301,6 +3305,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
+        type: 2}
+      propertyPath: birdFly
+      value: 
+      objectReference: {fileID: 8300000, guid: 6190ebc2522fc9b4f8d87bd2d27ecb53, type: 3}
+    - target: {fileID: 114575473342417992, guid: b99c4e163505a43fbb1e4e8c80cde2d4,
+        type: 2}
+      propertyPath: birdCadan
+      value: 
+      objectReference: {fileID: 8300000, guid: b2311b746d9059f4a8608e150d18f8aa, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b99c4e163505a43fbb1e4e8c80cde2d4, type: 2}
   m_IsPrefabParent: 0
@@ -3839,6 +3853,7 @@ GameObject:
   - component: {fileID: 1506964903}
   - component: {fileID: 1506964904}
   - component: {fileID: 1506964905}
+  - component: {fileID: 1506964906}
   m_Layer: 0
   m_Name: GameMap
   m_TagString: Untagged
@@ -4024,6 +4039,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1506964906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506964900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcd55c872551471cac2cbc94470e3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1514941569
 GameObject:
   m_ObjectHideFlags: 0

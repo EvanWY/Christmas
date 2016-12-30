@@ -18,15 +18,13 @@ public class ComboManager : MonoBehaviour {
 	/// The current combo number.
 	/// </summary>
 	public static int currentComboNum;
-	public static int GiftSentNum;
+
     public static int highestComboNum;
 
 	static int comboNum_Display;
 	static AudioSource aus;
 	static Animator anim_UI;
 	static Text comboUI_static;
-	static AudioClip[] comboUpSounds_static;
-	static AudioClip comboBreakSound_static;
 	static bool reset;
 
 	/// <summary>
@@ -39,7 +37,6 @@ public class ComboManager : MonoBehaviour {
 		}
 			
 		comboNum_Display += 1;
-		GiftSentNum++;
 		currentComboNum += 1;
 		AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["comboUp"]);
 		comboUI_static.text = comboNum_Display.ToString () + "\n<size=96>combo</size>";
@@ -66,12 +63,9 @@ public class ComboManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		aus = GetComponent<AudioSource> ();
-		comboUpSounds_static = comboUpSounds;
-		comboBreakSound_static = comboBreakSound;
 		comboUI_static = comboUI; 
 		comboUI.enabled = false;
 		anim_UI = comboUI_static.GetComponent<Animator> ();
-		GiftSentNum = 0;
 		currentComboNum = 0;
 		highestComboNum = 0;
 	}

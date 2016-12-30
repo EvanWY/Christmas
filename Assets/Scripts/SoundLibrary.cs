@@ -20,7 +20,10 @@ public class SoundLibrary : MonoBehaviour {
 	public AudioClip santaDamaged;
 	public AudioClip presentDelivered;
 
+	[Header("Bird")]
 	public AudioClip birdFly;
+	public AudioClip birdCadan;
+
 
 	[Header("Game Scene UI")]
 	public AudioClip pauseButton;
@@ -53,6 +56,9 @@ public class SoundLibrary : MonoBehaviour {
 
 		clipDictionary ["comboUp"] = comboUp;
 		clipDictionary ["comboBreak"] = comboBreak;
+
+		clipDictionary ["birdFly"] = birdFly;
+		clipDictionary ["birdCadan"] = birdCadan;
 	}
 
 	// Update is called once per frame

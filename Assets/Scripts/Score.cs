@@ -29,7 +29,7 @@ public class Score : MonoBehaviour {
         totalScore = timeScore + giftScore;
         giftNum = ComboManager.currentComboNum;
         scoreText.text = totalScore.ToString();
-		giftNumText.text = ComboManager.GiftSentNum.ToString();
+		giftNumText.text = GiftManager.GiftSentNum.ToString();
 		//Debug.Log(totalScore);
 	}
 

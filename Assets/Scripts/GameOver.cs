@@ -38,6 +38,6 @@ public class GameOver : MonoBehaviour {
         yield return new WaitForSeconds(2.5f);
         gameOverPanel.SetActive(true);
         totalScore.text = scoreSystem.totalScore.ToString();
-        highestGiftNumber.text = ComboManager.GiftSentNum.ToString();
+		highestGiftNumber.text = GiftManager.GiftSentNum.ToString();
     }
 }

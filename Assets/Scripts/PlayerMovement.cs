@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             StartCoroutine(Invincible(InvincibleTime));
 			if(collision.name.Contains("Bird")){
-				collision.GetComponent<BirdFly> ().AfterEffect ();
+				collision.GetComponent<BirdFly> ().AfterDamage ();
 			}
             ComboManager.ComboBreak();
             Debug.Log("Collide with house");
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour {
         {
 			//Destroy(collision.gameObject);
 			collision.gameObject.GetComponent<GiftController>().Collected();
-
+			GiftManager.GiftSentNum++;
 			TimeManager.AddTime (3.5f);
 			ComboManager.ComboUp();
             //Debug.Log("Gift delivered");
@@ -125,7 +125,6 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			//Destroy(collision.gameObject);
 			collision.transform.parent.GetComponent<BirdFly>().BirdGG();
-			collision.transform.parent.GetComponent<BirdFly>().AfterEffect ();
 			TimeManager.AddTime (3.5f);
 			ComboManager.ComboUp();
 			//Debug.Log("Gift delivered");

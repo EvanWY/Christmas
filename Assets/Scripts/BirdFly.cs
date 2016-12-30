@@ -13,11 +13,16 @@ public class BirdFly : MonoBehaviour {
 
 	Rigidbody2D rigid;
 	Animator anim;
+	AudioSource aus;
+	void Awake(){
+		aus = GetComponent<AudioSource> ();
+		anim = GetComponent<Animator> ();
+	}
+
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator> ();
 		SetSpeed ();
-
+		AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["birdFly"]);
     }
 
 	void SetSpeed(){
@@ -44,12 +49,15 @@ public class BirdFly : MonoBehaviour {
 			rigid = gameObject.AddComponent<Rigidbody2D> ();
 		birdCol.isTrigger = false;
 		anim.SetTrigger ("gg");
+		cadanCol.enabled = false;
+		AudioPlay.PlaySound (aus, SoundLibrary.clipDictionary["birdCadan"]);
 	}
 
 	/// <summary>
 	/// Will be called After the bird deals damage.
 	/// </summary>
-	public void AfterEffect(){
+	public void AfterDamage(){
 		cadanCol.enabled = false;
 	}
 }
+
