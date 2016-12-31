@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
     
 	void Start()
     {
-		Input.simulateMouseWithTouches = true;
+		//Input.simulateMouseWithTouches = true;
         OnTouchEnd();
 
         bCollider = GetComponent<BoxCollider2D>();
@@ -116,7 +116,7 @@ public class PlayerMovement : MonoBehaviour {
 			//Destroy(collision.gameObject);
 			collision.gameObject.GetComponent<GiftController>().Collected();
 			GiftManager.GiftSentNum++;
-			TimeManager.AddTime (3.5f);
+			TimeManager.AddTime (3f);
 			ComboManager.ComboUp();
             //Debug.Log("Gift delivered");
         }
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			//Destroy(collision.gameObject);
 			collision.transform.parent.GetComponent<BirdFly>().BirdGG();
-			TimeManager.AddTime (3.5f);
+			TimeManager.AddTime (3f);
 			ComboManager.ComboUp();
 			//Debug.Log("Gift delivered");
 		}

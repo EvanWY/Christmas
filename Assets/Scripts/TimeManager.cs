@@ -7,7 +7,6 @@ public class TimeManager : MonoBehaviour {
 
 	class Timer : MonoBehaviour{
 		float currentTime;
-	
 
 		public Timer(float time){
 			currentTime = time;
@@ -29,26 +28,42 @@ public class TimeManager : MonoBehaviour {
 	[SerializeField]
 	Text timeUI;
 
+	public AnimationCurve curve;
+	public float timeSpeed;
+	public float initialTime;
 	public static float currentTimer;
 	public static Text timeUI_static;
 
+	float elipsedTime;
+
+
 	// Use this for initialization
 	void Awake () {
-		currentTimer = 10.00f;
+		elipsedTime = 0;
+		currentTimer = initialTime;
 		timeUI_static = timeUI;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(currentTimer > 0){
-			currentTimer -= Time.deltaTime;
+		//calculate elipsed time
+		elipsedTime += Time.deltaTime;
+		float elipsedMin = elipsedTime / 60;
+		timeSpeed = curve.Evaluate (elipsedMin);
+
+		if (currentTimer > 0) {
+			currentTimer -= Time.deltaTime * timeSpeed;
+		} else {
+			currentTimer = 0;
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerHealth> ().Die ();
 		}
-		timeUI_static.text = currentTimer.ToString ();
+		timeUI_static.text = currentTimer.ToString ("0.00");
 	}
 
 	public static void AddTime(float time){
 		currentTimer += time;
 	}
+		
 
 	void StartTimer(){
 

@@ -83,4 +83,8 @@ public class PlayerHealth : MonoBehaviour {
 			}
 		}
     }
+
+	public void Die(){
+		currentHealth = -1;
+	}
 }

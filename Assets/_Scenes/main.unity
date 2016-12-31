@@ -91,6 +91,80 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &83569354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 83569355}
+  - component: {fileID: 83569357}
+  - component: {fileID: 83569356}
+  m_Layer: 5
+  m_Name: TimeUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &83569355
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83569354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 1928725453}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 435}
+  m_SizeDelta: {x: 4000, y: 4000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &83569356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83569354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.75107384, g: 0.8088235, b: 0.5471453, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 33ca21de5eac77a49ac13a6cdd7a6f5a, type: 3}
+    m_FontSize: 300
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1
+--- !u!222 &83569357
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83569354}
 --- !u!1 &148887836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,6 +1938,67 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad75e2c256be1914eb3e40f5a7cd786a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &645510533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 645510535}
+  - component: {fileID: 645510534}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &645510534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 645510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26a2a8eba8c048c19c731859b641e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeUI: {fileID: 83569356}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.9560493
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 4.8773184
+      value: 1.6021864
+      inSlope: 0.23701689
+      outSlope: 0.23701689
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  timeSpeed: 1.3
+  initialTime: 20
+--- !u!4 &645510535
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 645510533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.17, y: 3.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &665149003 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010573066756, guid: 85725917c50c96a43aa46174083a226b,
@@ -2477,6 +2612,20 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2082137265}
   m_Script: {fileID: 11500000, guid: d17054c2bdbf1034f975532b7e477eaa, type: 3}
+--- !u!70 &828076432
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828076429}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.059338152, y: -0.010471821}
+  m_Size: {x: 1.3586575, y: 0.8673618}
+  m_Direction: 1
 --- !u!114 &828076436 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114385336608397446, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
@@ -5352,6 +5501,7 @@ RectTransform:
   - {fileID: 1846067830}
   - {fileID: 1488272444}
   - {fileID: 520328847}
+  - {fileID: 83569355}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5697,7 +5847,32 @@ Prefab:
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114000013290376868, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
+        type: 2}
+      propertyPath: ForwardSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013290376868, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
+        type: 2}
+      propertyPath: VirticalSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013290376868, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
+        type: 2}
+      propertyPath: SmoothTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013290376868, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e,
+        type: 2}
+      propertyPath: MaxVirticalSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010234926570, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 58702571444140582, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5d8f48bb0a07b214fa28ec707bf7cd3e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2121243504 stripped
