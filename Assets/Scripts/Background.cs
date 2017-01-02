@@ -6,12 +6,11 @@ public class Background : MonoBehaviour {
     public float cycleDistance;
 	public float cycleOffset;
 	public float initOffset;
-    private SpriteRenderer rend;
 	Transform cameraTfm;
 
 	// Use this for initialization
 	void Start () {
-        rend = GetComponent<SpriteRenderer>();
+        //rend = GetComponent<SpriteRenderer>();
 		cameraTfm = Camera.main.transform;
 	}
 	

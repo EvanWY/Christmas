@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
     public float MinHeight;
     public bool isInvincible;
 
-    private BoxCollider2D bCollider;
+    //private BoxCollider2D bCollider;
     private SpriteRenderer[] sRenderer;
 
 	[Header("For touch to move to pos")]
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour {
 		//Input.simulateMouseWithTouches = true;
         OnTouchEnd();
 
-        bCollider = GetComponent<BoxCollider2D>();
+        //bCollider = GetComponent<BoxCollider2D>();
         sRenderer = GetComponentsInChildren<SpriteRenderer>();
 
 		startTime = Time.time;
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             StartCoroutine(Invincible(InvincibleTime));
 			if(collision.name.Contains("Bird")){
-				collision.GetComponent<BirdFly> ().AfterDamage ();
+				collision.GetComponent<Bird> ().AfterDamage ();
 			}
             ComboManager.ComboBreak();
             Debug.Log("Collide with house");
@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (collision.CompareTag("Cadan"))
 		{
 			//Destroy(collision.gameObject);
-			collision.transform.parent.GetComponent<BirdFly>().BirdGG();
+			collision.transform.parent.GetComponent<Bird>().BirdGG();
 			TimeManager.AddTime (3f);
 			ComboManager.ComboUp();
 			//Debug.Log("Gift delivered");

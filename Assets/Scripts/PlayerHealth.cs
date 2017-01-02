@@ -10,18 +10,18 @@ public class PlayerHealth : MonoBehaviour {
     public PlayerMovement pm;
     public GameOver gameOverSystem;
 
-    private SpriteRenderer sRenderer;
+    //private SpriteRenderer sRenderer;
     private float currentHealth;
     private float invincibleT;
     private bool isInvinciblePM;
-    private float halfHealth;
+    //private float halfHealth;
 
 	// Use this for initialization
 	void Start () {
         currentHealth = initialHealth;
-        sRenderer = GetComponentInChildren<SpriteRenderer>();
+        //sRenderer = GetComponentInChildren<SpriteRenderer>();
         invincibleT = pm.InvincibleTime;
-        halfHealth = initialHealth / 2.0f;
+        //halfHealth = initialHealth / 2.0f;
 
 		StartCoroutine(RegenerateHealth());
 	}
